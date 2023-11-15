@@ -71,13 +71,8 @@ LIB			=	ar rc
 
 DEFINES = -DPROGRAM_NAME=\"$(NAME)\"
 
-FLAGS =	-Wall -Wextra \
-		-Wuninitialized -Wmissing-prototypes -Winit-self -Wfloat-equal -Wwrite-strings -Winline \
-		-Wunused-parameter -Wunused-const-variable -pedantic-errors -Wcast-qual -Wconversion \
-		-Wmissing-noreturn -Wdeclaration-after-statement -Wshadow -Wpointer-arith \
-		-Wdouble-promotion -Wnull-dereference -Wswitch-default -Wmissing-declarations \
-		-Wold-style-definition -Wundef -Wunused-macros -Wbad-function-cast -Wmissing-variable-declarations \
-		-fgnu89-inline -pedantic \
+FLAGS =	-Wall -Wextra -std=c99 -pedantic -Wmissing-prototypes -Wstrict-prototypes \
+        -Wold-style-definition -D_POSIX_C_SOURCE=200809L \
 	$(INCLUDES) $(DEFINES)
 LINK_FLAGS  =
 

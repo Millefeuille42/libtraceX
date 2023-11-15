@@ -3,10 +3,10 @@ project(libtraceX C)
 
 set(CMAKE_C_STANDARD 99)
 
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Wextra -std=gnu89 -pedantic -Wmissing-prototypes -Wstrict-prototypes \
-        -Wold-style-definition ")
-set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} -Wall -Wextra -std=gnu89 -pedantic -Wmissing-prototypes -Wstrict-prototypes \
-        -Wold-style-definition")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Wextra -std=c99 -pedantic -Wmissing-prototypes -Wstrict-prototypes \
+        -Wold-style-definition -D_POSIX_C_SOURCE=200809L ")
+set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} -Wall -Wextra -std=c99 -pedantic -Wmissing-prototypes -Wstrict-prototypes \
+        -Wold-style-definition -D_POSIX_C_SOURCE=200809L")
 
 include_directories(./pkg/ft_error)
 include_directories(./pkg/ft_print)
